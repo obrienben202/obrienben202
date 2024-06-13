@@ -1,0 +1,84 @@
+<html>
+
+<Head>
+  <title> Homepage - Think Future</title>
+  <link href="TRFstyles.css" rel="stylesheet" type="text/css" href="https://fonts.google.com/share?selection.family=Audiowide|Ubuntu">
+</head>
+
+<body>
+
+  <div id="page">
+    <a href="index.html"> <Img src="images/ThinkFutureLogo2.png" alt="Think Future Recruitment">
+      <div id="navigation">
+        <button id="button"><a href="cybersecurity.html">Cybersecurity</a></button>
+        <button id="button"><a href="data.html">Data Analytics </a></button>
+        <button id="button"><a href="cloudeng.html">Cloud Engineer</a></button>
+        <button id="button"><a href="aieng.html">AI Engineer</a></button>
+        <button id="button"><a href="iotspec.html">IoT Specialist</a></button>
+      </div>
+      <div id="text">
+        <img id="gif1" src="images/morning.gif" alt="Morning GIF" width="470" height="470">
+        <img id="gif2" src="images/afternoon.gif" alt="Afternoon GIF" width="470" height="470">
+        <img id="gif3" src="images/evening.gif" alt="Evening GIF" width="470" height="470">
+        <script>
+          const now = new Date();
+          const currentHour = now.getHours();
+
+          const morningHours = [6, 7, 8, 9, 10, 11];
+          const afternoonHours = [12, 13, 14, 15, 16];
+          const eveningHours = [17, 18, 19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5];
+
+          if (morningHours.includes(currentHour)) {
+            document.getElementById("gif1").style.display = "block";
+            document.getElementById("gif2").style.display = "none";
+            document.getElementById("gif3").style.display = "none";
+          } else if (afternoonHours.includes(currentHour)) {
+            document.getElementById("gif1").style.display = "none";
+            document.getElementById("gif2").style.display = "block";
+            document.getElementById("gif3").style.display = "none";
+          } else if (eveningHours.includes(currentHour)) {
+            document.getElementById("gif1").style.display = "none";
+            document.getElementById("gif2").style.display = "none";
+            document.getElementById("gif3").style.display = "block";
+          }
+        </script>
+        <p> If you are a part of the industry or are training, get in touch using the form below:</p>
+
+        <h1>Think Future Recruitment Sign Up</h1>
+        <p>Sign up here for up-to-date information on the digital technologies industry in 2023 and beyond</p>
+        <hr>
+        <div class="container">
+          <form method="post" action="mailto:infor@thinkfuture.gov">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter First Name" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter Last Name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email Address" name="email" id="email" required>
+
+            <label for="phonenum"><b>Phone Number</b></label>
+            <input type="text" placeholder="Enter Phone Number" name="phonenum" id="phonenum" required>
+
+            <label for="country">Job Role</label>
+            <select id="jobrole" name="jobrole">
+              <option value="nonjobrole">Non Job Role</option>
+              <option value="cybersecurity">Cybersecurity</option>
+              <option value="dataanalysist">Data Analysist</option>
+              <option value="cloudengineer">Cloud Engineer</option>
+              <option value="aiengineer">AI Engineer</option>
+              <option value="iotspecialist">IoT Specialist</option>
+            </select>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+        <hr>
+
+        <Img src="images/someone_pointing.png" alt="Someone Pointing at some AI things for the other work to look at."
+          style="width:800px;height:550px;">
+        <p>We at THINK FUTURE RECRUITMENT are here to show you the types of jobs that will be in demand within the
+          digital technologies industry in 2023 and beyond.</p>
+</body>
+
+</html>
